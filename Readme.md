@@ -9,8 +9,8 @@ Requirements for the project:
 To Initialize the project follow these steps:
 1]Start the index.html file on the localhost
 2]Use "Santa-letter.docx" for the template(There is already a tempate present in a template folder)
-4]You need to create a database which present in DATABASE SQL folder(DATABASE name is: registration)
-5]The output would be put inside the Total_Output folder
+3]You need to create a database which present in DATABASE SQL folder(DATABASE name is: registration)
+4]The output would be put inside the Total_Output folder
 
 
 Video Link for the Video Tutorial: https://youtu.be/pHe91G45YDw
