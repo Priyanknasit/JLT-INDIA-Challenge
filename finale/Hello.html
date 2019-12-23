@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=button] {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=button]:hover {
+  background-color: #45a049;
+}
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 50%;
+  box-shadow: 0 0 6px gray;
+  margin: 10% auto;
+}
+.header{
+   border-radius: 5px;
+  padding: 10px;
+  padding-left: 20px;
+	background-color: #007bff;
+	color: white;
+  box-shadow: 0 0 6px gray;
+  width: 50%;
+}
+</style>
+</head>
+<body>
+<div class=header>
+<h2>Registration Form</h2>
+</div>
+<div class="container">
+  <form>
+<label>Firstname</label>
+   <input type="text" id="Firstname">
+<label>Middlename</label>
+   <input type="text" id="Middlename">
+<label>Lastname</label>
+   <input type="text" id="Lastname">
+<label>Email</label>
+   <input type="text" id="Email">
+<label>Phone_no</label>
+   <input type="text" id="Phone_no">
+<label>Address</label>
+   <input type="text" id="Address">
+<label>Pincode</label>
+   <input type="text" id="Pincode">
+<label>Car_no</label>
+   <input type="text" id="Car_no"> 
+<input type="button" value="Submit" onclick="saveFile()">
+  </form>
+</div>
+</body>
+<script>
+   let saveFile = () => {
+const Firstname= document.getElementById('Firstname');
+const Middlename= document.getElementById('Middlename');
+const Lastname= document.getElementById('Lastname');
+const Email= document.getElementById('Email');
+const Phone_no= document.getElementById('Phone_no');
+const Address= document.getElementById('Address');
+const Pincode= document.getElementById('Pincode');
+const Car_no= document.getElementById('Car_no');let data =            '{"Firstname": ' +"\""+Firstname.value +"\"\,"+'"Middlename": ' +"\""+Middlename.value +"\"\,"+'"Lastname": ' +"\""+Lastname.value +"\"\,"+'"Email": ' +"\""+Email.value +"\"\,"+'"Phone_no": ' +"\""+Phone_no.value +"\"\,"+'"Address": ' +"\""+Address.value +"\"\,"+'"Pincode": ' +"\""+Pincode.value +"\"\,"+'"Car_no": ' +"\""+Car_no.value +"\""+"}";
+const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = 'letter.docx'; 
+  let newLink = document.createElement("a");
+        newLink.download = sFileName;
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+       }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";            document.body.appendChild(newLink);
+        }
+        newLink.click(); 
+    }
+</script>
+</html>

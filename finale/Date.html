@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=button] {
+  position: relative;
+  background-color: #1545b3;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 300px;
+}
+input[type=button]:hover {
+  background-color: #45a049;
+}
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width:50%;
+  box-shadow: 0 0 6px gray;
+  margin-left: 300px;
+}
+.header{
+   border-radius: 5px;
+   margin-top: 100px;
+  padding: 10px;
+  padding-left: 20px;
+	background-color: #1545b3;
+	color: white;
+  width:50%;
+  box-shadow: 0 0 6px gray;
+  margin-left: 300px;
+}
+</style>
+</head>
+<body>
+<div class=header>
+<h2>Registration Form</h2>
+</div>
+<div class="container">
+  <form>
+<label>Date</label>
+   <input type="text" id="Date">
+<label>College</label>
+   <input type="text" id="College">
+<label>Subject_Of_Letter</label>
+   <input type="text" id="Subject_Of_Letter">
+<label>Event_Name</label>
+   <input type="text" id="Event_Name">
+<label>Event_Date</label>
+   <input type="text" id="Event_Date">
+<label>Event_Team</label>
+   <input type="text" id="Event_Team"> 
+<input type="button" value="Submit" onclick="saveFile()">
+  </form>
+</div>
+</body>
+<script>
+   let saveFile = () => {
+const Date= document.getElementById('Date');
+const College= document.getElementById('College');
+const Subject_Of_Letter= document.getElementById('Subject_Of_Letter');
+const Event_Name= document.getElementById('Event_Name');
+const Event_Date= document.getElementById('Event_Date');
+const Event_Team= document.getElementById('Event_Team');let data =            '{"Date": ' +"\""+Date.value +"\"\,"+'"College": ' +"\""+College.value +"\"\,"+'"Subject_Of_Letter": ' +"\""+Subject_Of_Letter.value +"\"\,"+'"Event_Name": ' +"\""+Event_Name.value +"\"\,"+'"Event_Date": ' +"\""+Event_Date.value +"\"\,"+'"Event_Team": ' +"\""+Event_Team.value +"\""+"}";
+const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = 'letter.docx'; 
+  let newLink = document.createElement("a");
+        newLink.download = sFileName;
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+       }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";            document.body.appendChild(newLink);
+        }
+        newLink.click(); 
+    }
+</script>
+</html>

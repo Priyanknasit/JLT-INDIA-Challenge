@@ -1,0 +1,40 @@
+<div id="header">
+ Send Form's data as JSON
+</div>
+
+<form id="myform" type="post">
+  <fieldset>
+    <legend>Ajax Form  </legend>
+    <p>We would love to hear from you. Please fill out this form</p>
+    <div class="elements">
+      <label for="name">Name :</label>
+      <input  required="required" type="text"  value="Girish Kumar Santhu" name="fname"  size="20"  />
+    </div>
+     <div class="elements">
+      <label for="Age">Age :</label>
+      <input required="required" type="number" value="32" id="age" name="age" size="10" />
+    </div>  
+    <div class="elements">
+      <label for="pro"> Profession :</label>
+      <select name="pro">
+   <option value="Student">Student</option>
+   <option value="Engineer" selected="selected">Engineer</option>
+   </select>
+    </div>      
+    <div class="elements">
+    <label for="Gender">Gender: </label>
+      <input type="radio" name="gender" value="Male" checked="checked" id="r1"> Male 
+  <input type="radio" name="gender" value="Female" id="r2"> Female 
+</div>  
+    <div class="elements">
+      <label for="hobby">Hobby :</label>
+      <input type="checkbox" name="hobby[]" value="Sports" id="ch1" checked="checked"> Sports 
+  <input type="checkbox" name="hobby[]" value="Coding"  id="ch2"> Coding 
+   </div>
+
+    <div class="submit">
+       <input type="submit" id="btn" name="btn" class="btn" value="Submit" />
+    </div>
+    <span class="elements">Press "Ctrl + Shift + J" to see sent JSON in console: <span>
+  </fieldset>
+</form>
