@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JLT India Challenge</title>
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=button] {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=button]:hover {
+  background-color: #45a049;
+}
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.header{
+   border-radius: 5px;
+  padding: 10px;
+  padding-left: 20px;
+	background-color: #007bff;
+	color: white;
+}
+</style>
+</head>
+<body>
+<div class=header>
+<h2>Registration Form</h2>
+</div>
+<div class="container">
+  <form>
+<label>Subject_Of_Letter</label>
+   <input type="text" id="Subject_Of_Letter" >
+<label>Event_Name</label>
+   <input type="text" id="Event_Name" >
+<label>College</label>
+   <input type="text" id="College" >
+<label>Event_Date</label>
+   <input type="text" id="Event_Date" >
+<label>Date</label>
+   <input type="text" id="Date" >
+<label>Event_Team</label>
+   <input type="text" id="Event_Team" > 
+<input type="button" value="Submit" onclick="saveFile()">
+  </form>
+</div>
+</body>
+<script>
+   let saveFile = () => {
+const Subject_Of_Letter= document.getElementById('Subject_Of_Letter');
+const Event_Name= document.getElementById('Event_Name');
+const College= document.getElementById('College');
+const Event_Date= document.getElementById('Event_Date');
+const Date= document.getElementById('Date');
+const Event_Team= document.getElementById('Event_Team');let data =            '{"Subject_Of_Letter": ' +"\""+Subject_Of_Letter.value +"\"\,"+'"Event_Name": ' +"\""+Event_Name.value +"\"\,"+'"College": ' +"\""+College.value +"\"\,"+'"Event_Date": ' +"\""+Event_Date.value +"\"\,"+'"Date": ' +"\""+Date.value +"\"\,"+'"Event_Team": ' +"\""+Event_Team.value +"\""+"}";
+const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = 'letter2.json'; 
+  let newLink = document.createElement("a");
+        newLink.download = sFileName;
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+       }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";            document.body.appendChild(newLink);
+        }
+        newLink.click(); 
+    }
+</script>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=button] {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=button]:hover {
+  background-color: #45a049;
+}
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.header{
+   border-radius: 5px;
+  padding: 10px;
+  padding-left: 20px;
+	background-color: #007bff;
+	color: white;
+}
+</style>
+</head>
+<body>
+<div class=header>
+<h2>Registration Form</h2>
+</div>
+<div class="container">
+  <form>
+<label>Recover_Preferred_Provider_Form</label>
+   <input type="text" id="Recover_Preferred_Provider_Form" >
+<label>Copyright</label>
+   <input type="text" id="Copyright" >
+<label>Policy_Wording_and_Conditions</label>
+   <input type="text" id="Policy_Wording_and_Conditions" >
+<label>Privacy_Act</label>
+   <input type="text" id="Privacy_Act" >
+<label>jmf_PolicyClass</label>
+   <input type="text" id="jmf_PolicyClass" >
+<label>Scope_of_Cover</label>
+   <input type="text" id="Scope_of_Cover" >
+<label>JLT_Contacts</label>
+   <input type="text" id="JLT_Contacts" >
+<label>JMF_POLICYCLASS</label>
+   <input type="text" id="JMF_POLICYCLASS" >
+<label>NSW_Stamp_Duty_Exemption_Declaration</label>
+   <input type="text" id="NSW_Stamp_Duty_Exemption_Declaration" >
+<label>jmf_Broker2Name</label>
+   <input type="text" id="jmf_Broker2Name" >
+<label>Asset_Schedule_Declaration_Introduction</label>
+   <input type="text" id="Asset_Schedule_Declaration_Introduction" >
+<label>jmf_DateCreated</label>
+   <input type="text" id="jmf_DateCreated" >
+<label>Declaration_Questionnaire_Introduction</label>
+   <input type="text" id="Declaration_Questionnaire_Introduction" >
+<label>JMF_CLIENTNAME</label>
+   <input type="text" id="JMF_CLIENTNAME" >
+<label>jmf_PolicyExpiry</label>
+   <input type="text" id="jmf_PolicyExpiry" >
+<label>Client_Profile_Description</label>
+   <input type="text" id="Client_Profile_Description" >
+<label>jmf_PolicyUwRef</label>
+   <input type="text" id="jmf_PolicyUwRef" >
+<label>jmf_Broker1Email</label>
+   <input type="text" id="jmf_Broker1Email" >
+<label>jmf_PolicyNo</label>
+   <input type="text" id="jmf_PolicyNo" >
+<label>jmf_Broker1Name</label>
+   <input type="text" id="jmf_Broker1Name" >
+<label>Sanctions</label>
+   <input type="text" id="Sanctions" >
+<label>Introduction_Declaration</label>
+   <input type="text" id="Introduction_Declaration" >
+<label>Policy_Profile_Description</label>
+   <input type="text" id="Policy_Profile_Description" >
+<label>Schedule</label>
+   <input type="text" id="Schedule" >
+<label>jmf_PolicySituation</label>
+   <input type="text" id="jmf_PolicySituation" >
+<label>Asset_Schedule</label>
+   <input type="text" id="Asset_Schedule" >
+<label>jmf_Broker2DirDial</label>
+   <input type="text" id="jmf_Broker2DirDial" >
+<label>jmf_Broker1DirDial</label>
+   <input type="text" id="jmf_Broker1DirDial" >
+<label>jmf_PolicyUwName</label>
+   <input type="text" id="jmf_PolicyUwName" >
+<label>Questionnaire</label>
+   <input type="text" id="Questionnaire" >
+<label>jmf_PolicyInsured</label>
+   <input type="text" id="jmf_PolicyInsured" >
+<label>jmf_Broker2Email</label>
+   <input type="text" id="jmf_Broker2Email" >
+<label>jmf_Broker2Title</label>
+   <input type="text" id="jmf_Broker2Title" >
+<label>jmf_Broker1Mobile</label>
+   <input type="text" id="jmf_Broker1Mobile" >
+<label>jmf_PolicyFrom</label>
+   <input type="text" id="jmf_PolicyFrom" >
+<label>Wageroll</label>
+   <input type="text" id="Wageroll" >
+<label>jmf_Broker2Mobile</label>
+   <input type="text" id="jmf_Broker2Mobile" >
+<label>Uninsured_Risks</label>
+   <input type="text" id="Uninsured_Risks" >
+<label>jmf_Broker1Title</label>
+   <input type="text" id="jmf_Broker1Title" >
+<label>Fire_Security_Protection_Questionnaire</label>
+   <input type="text" id="Fire_Security_Protection_Questionnaire" >
+<label>Distinctive_Choice</label>
+   <input type="text" id="Distinctive_Choice" > 
+<input type="button" value="Submit" onclick="saveFile()">
+  </form>
+</div>
+</body>
+<script>
+   let saveFile = () => {
+const Recover_Preferred_Provider_Form= document.getElementById('Recover_Preferred_Provider_Form');
+const Copyright= document.getElementById('Copyright');
+const Policy_Wording_and_Conditions= document.getElementById('Policy_Wording_and_Conditions');
+const Privacy_Act= document.getElementById('Privacy_Act');
+const jmf_PolicyClass= document.getElementById('jmf_PolicyClass');
+const Scope_of_Cover= document.getElementById('Scope_of_Cover');
+const JLT_Contacts= document.getElementById('JLT_Contacts');
+const JMF_POLICYCLASS= document.getElementById('JMF_POLICYCLASS');
+const NSW_Stamp_Duty_Exemption_Declaration= document.getElementById('NSW_Stamp_Duty_Exemption_Declaration');
+const jmf_Broker2Name= document.getElementById('jmf_Broker2Name');
+const Asset_Schedule_Declaration_Introduction= document.getElementById('Asset_Schedule_Declaration_Introduction');
+const jmf_DateCreated= document.getElementById('jmf_DateCreated');
+const Declaration_Questionnaire_Introduction= document.getElementById('Declaration_Questionnaire_Introduction');
+const JMF_CLIENTNAME= document.getElementById('JMF_CLIENTNAME');
+const jmf_PolicyExpiry= document.getElementById('jmf_PolicyExpiry');
+const Client_Profile_Description= document.getElementById('Client_Profile_Description');
+const jmf_PolicyUwRef= document.getElementById('jmf_PolicyUwRef');
+const jmf_Broker1Email= document.getElementById('jmf_Broker1Email');
+const jmf_PolicyNo= document.getElementById('jmf_PolicyNo');
+const jmf_Broker1Name= document.getElementById('jmf_Broker1Name');
+const Sanctions= document.getElementById('Sanctions');
+const Introduction_Declaration= document.getElementById('Introduction_Declaration');
+const Policy_Profile_Description= document.getElementById('Policy_Profile_Description');
+const Schedule= document.getElementById('Schedule');
+const jmf_PolicySituation= document.getElementById('jmf_PolicySituation');
+const Asset_Schedule= document.getElementById('Asset_Schedule');
+const jmf_Broker2DirDial= document.getElementById('jmf_Broker2DirDial');
+const jmf_Broker1DirDial= document.getElementById('jmf_Broker1DirDial');
+const jmf_PolicyUwName= document.getElementById('jmf_PolicyUwName');
+const Questionnaire= document.getElementById('Questionnaire');
+const jmf_PolicyInsured= document.getElementById('jmf_PolicyInsured');
+const jmf_Broker2Email= document.getElementById('jmf_Broker2Email');
+const jmf_Broker2Title= document.getElementById('jmf_Broker2Title');
+const jmf_Broker1Mobile= document.getElementById('jmf_Broker1Mobile');
+const jmf_PolicyFrom= document.getElementById('jmf_PolicyFrom');
+const Wageroll= document.getElementById('Wageroll');
+const jmf_Broker2Mobile= document.getElementById('jmf_Broker2Mobile');
+const Uninsured_Risks= document.getElementById('Uninsured_Risks');
+const jmf_Broker1Title= document.getElementById('jmf_Broker1Title');
+const Fire_Security_Protection_Questionnaire= document.getElementById('Fire_Security_Protection_Questionnaire');
+const Distinctive_Choice= document.getElementById('Distinctive_Choice');let data =            '{"Recover_Preferred_Provider_Form": ' +"\""+Recover_Preferred_Provider_Form.value +"\"\,"+'"Copyright": ' +"\""+Copyright.value +"\"\,"+'"Policy_Wording_and_Conditions": ' +"\""+Policy_Wording_and_Conditions.value +"\"\,"+'"Privacy_Act": ' +"\""+Privacy_Act.value +"\"\,"+'"jmf_PolicyClass": ' +"\""+jmf_PolicyClass.value +"\"\,"+'"Scope_of_Cover": ' +"\""+Scope_of_Cover.value +"\"\,"+'"JLT_Contacts": ' +"\""+JLT_Contacts.value +"\"\,"+'"JMF_POLICYCLASS": ' +"\""+JMF_POLICYCLASS.value +"\"\,"+'"NSW_Stamp_Duty_Exemption_Declaration": ' +"\""+NSW_Stamp_Duty_Exemption_Declaration.value +"\"\,"+'"jmf_Broker2Name": ' +"\""+jmf_Broker2Name.value +"\"\,"+'"Asset_Schedule_Declaration_Introduction": ' +"\""+Asset_Schedule_Declaration_Introduction.value +"\"\,"+'"jmf_DateCreated": ' +"\""+jmf_DateCreated.value +"\"\,"+'"Declaration_Questionnaire_Introduction": ' +"\""+Declaration_Questionnaire_Introduction.value +"\"\,"+'"JMF_CLIENTNAME": ' +"\""+JMF_CLIENTNAME.value +"\"\,"+'"jmf_PolicyExpiry": ' +"\""+jmf_PolicyExpiry.value +"\"\,"+'"Client_Profile_Description": ' +"\""+Client_Profile_Description.value +"\"\,"+'"jmf_PolicyUwRef": ' +"\""+jmf_PolicyUwRef.value +"\"\,"+'"jmf_Broker1Email": ' +"\""+jmf_Broker1Email.value +"\"\,"+'"jmf_PolicyNo": ' +"\""+jmf_PolicyNo.value +"\"\,"+'"jmf_Broker1Name": ' +"\""+jmf_Broker1Name.value +"\"\,"+'"Sanctions": ' +"\""+Sanctions.value +"\"\,"+'"Introduction_Declaration": ' +"\""+Introduction_Declaration.value +"\"\,"+'"Policy_Profile_Description": ' +"\""+Policy_Profile_Description.value +"\"\,"+'"Schedule": ' +"\""+Schedule.value +"\"\,"+'"jmf_PolicySituation": ' +"\""+jmf_PolicySituation.value +"\"\,"+'"Asset_Schedule": ' +"\""+Asset_Schedule.value +"\"\,"+'"jmf_Broker2DirDial": ' +"\""+jmf_Broker2DirDial.value +"\"\,"+'"jmf_Broker1DirDial": ' +"\""+jmf_Broker1DirDial.value +"\"\,"+'"jmf_PolicyUwName": ' +"\""+jmf_PolicyUwName.value +"\"\,"+'"Questionnaire": ' +"\""+Questionnaire.value +"\"\,"+'"jmf_PolicyInsured": ' +"\""+jmf_PolicyInsured.value +"\"\,"+'"jmf_Broker2Email": ' +"\""+jmf_Broker2Email.value +"\"\,"+'"jmf_Broker2Title": ' +"\""+jmf_Broker2Title.value +"\"\,"+'"jmf_Broker1Mobile": ' +"\""+jmf_Broker1Mobile.value +"\"\,"+'"jmf_PolicyFrom": ' +"\""+jmf_PolicyFrom.value +"\"\,"+'"Wageroll": ' +"\""+Wageroll.value +"\"\,"+'"jmf_Broker2Mobile": ' +"\""+jmf_Broker2Mobile.value +"\"\,"+'"Uninsured_Risks": ' +"\""+Uninsured_Risks.value +"\"\,"+'"jmf_Broker1Title": ' +"\""+jmf_Broker1Title.value +"\"\,"+'"Fire_Security_Protection_Questionnaire": ' +"\""+Fire_Security_Protection_Questionnaire.value +"\"\,"+'"Distinctive_Choice": ' +"\""+Distinctive_Choice.value +"\""+"}";
+const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = 'letter.json'; 
+  let newLink = document.createElement("a");
+        newLink.download = sFileName;
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+       }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";            document.body.appendChild(newLink);
+        }
+        newLink.click(); 
+    }
+</script>
+</html>
