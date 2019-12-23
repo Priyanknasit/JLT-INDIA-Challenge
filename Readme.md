@@ -12,5 +12,6 @@ To Initialize the project follow these steps:
 3]The output would be put inside the Total_Output folder 
 
 Video Link for the Video Tutorial: https://youtu.be/pHe91G45YDw
+The Presentation is in the repository with the name JLT INDIA CHALLENGE1.pptx 
 
 If any problem persists, contact Priyank Nasit:8905902752, SunderEshwar: 7623956506
